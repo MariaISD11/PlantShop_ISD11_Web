@@ -31,7 +31,7 @@ body{
     color: var(--white);
     background-color: var(--dark-green);
     height: 40px;
-    padding: 8px 0;
+    padding: 8px 120px;
     justify-content: space-between;
     align-items: center;
 }
@@ -81,3 +81,40 @@ body{
     align-items: center;
 }
 
+.positions{
+    margin: 32px 120px 120px;
+}
+
+.positions-all{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green);
+    font-weight: 400;
+    font-size: 16px;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.positions-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.positions-main img{
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    box-shadow: 0 8px 23px 0 rgba(80, 107, 82, 0.16);
+    margin-bottom: 24px;
+}
+
+.positions-main figcaption{
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--black);
+}
