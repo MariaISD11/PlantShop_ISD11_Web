@@ -302,3 +302,8 @@ main section{
     justify-content: center;
     align-items: stretch;
 }
+
+.hot-sales, .planter{
+    display: flex;
+    justify-content: space-between;
+}
