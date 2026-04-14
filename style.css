@@ -307,3 +307,57 @@ main section{
     display: flex;
     justify-content: space-between;
 }
+
+.gardening{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gardening-box{
+    width: calc((100% - 24px) / 2);
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.gardening-text{
+    box-sizing: border-box;
+    height: 258px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 28px;
+}
+
+.gardening-text-main{
+    font-size: 24px;
+    font-weight: var(--font-thin);
+}
+
+.gardening-text-warning{
+    font-size: 20px;
+    font-weight: var(--font-special);
+    font-style: italic;
+    color: var(--red);
+}
+
+.gardening .btn{
+    width: 282px;
+}
+
+.gardening-picture{
+    width: 100%;
+    height: 100%;
+    object-position: 100% 100%;;
+    object-fit: cover;
+}
+
+.gardening-picture-decoration{
+    border: 1px solid var(--green);
+    border-radius: 16px;
+    box-shadow: 0 8px 23px 0 rgba(80, 107, 82, 0.13);
+}
