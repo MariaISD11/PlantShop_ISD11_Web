@@ -228,3 +228,27 @@ main section{
     justify-content: space-between;
     margin-bottom: 120px;
 }
+
+.trend-plants{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.name{
+    font-weight: var(--font-bold);
+}
+
+.price{
+    font-weight: var(--font-thin);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.old-price{
+    font-weight: var(--font-special);
+    font-size: 16px;
+    color: var(--red);
+    text-decoration: line-through 1px;
+}
