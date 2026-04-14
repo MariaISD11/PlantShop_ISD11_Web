@@ -361,3 +361,53 @@ main section{
     border-radius: 16px;
     box-shadow: 0 8px 23px 0 rgba(80, 107, 82, 0.13);
 }
+
+.celebs-gallery{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+.celeb-card{
+    position: relative;
+    box-shadow: 0 8px 23px 0 rgba(80, 107, 82, 0.13);
+    border-radius: 8px;
+    height: 310px;
+    overflow: hidden;
+}
+
+.celeb-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 7%, rgba(52, 52, 52, 0) 32%);
+    border-radius: 8px;
+}
+
+.celeb-card figcaption{
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    z-index: 10;
+
+    text-align: left;
+    font-weight: var(--font-thin);
+    font-size: 16px;
+    color: var(--white);
+}
+
+.s4-column{
+    grid-column: span 3;
+}
+
+.s3-column{
+    grid-column: span 4;
+}
+
+.celebs img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
