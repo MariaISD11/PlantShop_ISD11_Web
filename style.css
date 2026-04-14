@@ -139,3 +139,92 @@ main section{
     
     color: var(--black);
 }
+
+.title{
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.title-left{
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.title p{
+    font-family: var(--headers-font);
+    font-weight: var(--font-bold);
+    font-size: 48px;
+    color: var(--black);
+}
+
+.sale-box{
+    display:flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-color: var(--white);
+    padding: 20px;
+    gap: 16px;
+    box-shadow: 0 8px 23px 0 rgba(80, 107, 82, 0.13);
+    
+    position: relative;
+}
+
+.sale-box-picture{
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.sale-box-large{
+    width: 384px;
+}
+
+.sale-box-mini{
+    width: 282px;
+}
+
+.sale-box-large .sale-box-picture{
+    width: 344px;
+    height: 318px;
+}
+
+.sale-box-mini .sale-box-picture{
+    width: 242px;
+    height: 176px;
+}
+
+.sale-box-discount{
+    width: 64px;
+    height: 64px;
+    
+    position: absolute;
+    inset: 28px 28px auto auto;
+}
+
+.sale-box-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 4px;
+}
+
+.btn{
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: var(--green);
+    cursor: pointer;
+    color: var(--bg-color);
+    font-weight: var(--font-bold);
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    width: 100%;
+}
+
+.best-plants{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
