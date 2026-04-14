@@ -252,3 +252,53 @@ main section{
     color: var(--red);
     text-decoration: line-through 1px;
 }
+
+.blog{
+    display: flex;
+    justify-content:space-between;
+}
+
+.blog-box{
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 16px;
+    align-items: center;
+    width: calc((100% - 24px) / 2);
+    height: 286px;
+    box-shadow: 0 8px 23px 0 rgba(80, 107, 82, 0.13);
+}
+
+.blog-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+.blog-descrip::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(80, 107, 82, 0.25);
+    z-index: -1;
+}
+
+.blog-descrip{
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    
+    padding: 40px 94px;
+    gap: 28px;
+    text-align: center;
+    font-weight: var(--font-thin);
+    font-size: 28px;
+    color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
