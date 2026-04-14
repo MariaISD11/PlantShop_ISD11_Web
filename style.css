@@ -96,3 +96,46 @@ main section{
     height: 40px;
     align-items: center;
 }
+
+.positions{
+    margin-top: 32px;
+}
+
+.positions-all{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green);
+    font-weight: var(--font-thin);
+    font-size: 16px;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.positions-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.positions-main a{
+    color: inherit;
+}
+
+.positions-main img{
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    box-shadow: 0 8px 23px 0 rgba(80, 107, 82, 0.16);
+    margin-bottom: 24px;
+}
+
+.positions-main figcaption{
+    font-weight: var(--font-bold);
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    
+    color: var(--black);
+}
