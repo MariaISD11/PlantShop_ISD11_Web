@@ -21,6 +21,10 @@ const database = {
     { name: 'Aloe Rauhii', price: 350, image: 'image/Aloe_Rauhii.png' },
     { name: 'Areca Palm', price: 350, image: 'image/Areca_Palm.png' },
     { name: 'Sansevieria Black', price: 350, image: 'image/Sansevieria_Black.png' }
+  ],
+  blogs: [
+    { text: '8 Best <br>Low Maintenance Plants <br>For a Busy Home', image: 'image/back_photo1.png' },
+    { text: 'Air Purifying Plants <br>You Should Take Home <br>Today', image: 'image/back_photo2.png' }
   ]
 };
 
@@ -38,7 +42,7 @@ function buildSection(data, containerId, templateType) {
     let element;
 
     switch (templateType) {
-      case 'position-figure': // Секція з круглими категоріями (твоя перша частина)
+      case 'position-figure': 
         element = document.createElement('figure');
         element.innerHTML = `
           <a href="#">
@@ -48,7 +52,7 @@ function buildSection(data, containerId, templateType) {
         `;
         break;
 
-      case 'sale-large': // Секція Best Selling
+      case 'sale-large': 
         element = document.createElement('div');
         element.className = 'sale-box sale-box-large';
         element.innerHTML = `
@@ -57,7 +61,7 @@ function buildSection(data, containerId, templateType) {
         `;
         break;
       
-      case 'sale-mini': // Секція Trending Plants
+      case 'sale-mini': 
         element = document.createElement('div');
         element.className = 'sale-box sale-box-mini';
         element.innerHTML = `
@@ -69,6 +73,18 @@ function buildSection(data, containerId, templateType) {
           <a href="#" class="btn">Buy</a>
         `;
         break;
+
+      case 'blog-card': 
+        element = document.createElement('div');
+        element.className = 'blog-box';
+        element.innerHTML = `
+          <img src="${item.image}" alt="photo">
+          <div class="blog-descrip">
+              <p>${item.text}</p>
+              <a href="#" class="btn">Read</a>
+          </div>
+        `;
+        break;
     }
 
     if (element) container.appendChild(element);
@@ -78,3 +94,4 @@ function buildSection(data, containerId, templateType) {
 buildSection(database.positions, 'positionsMain', 'position-figure');
 buildSection(database.bestSelling, 'bestPlantsContainer', 'sale-large');
 buildSection(database.trending, 'trendingPlantsContainer', 'sale-mini');
+buildSection(database.blogs, 'blogsContainer', 'blog-card');
