@@ -11,8 +11,18 @@ const database = {
     { image: 'image/indoor.png', alt: 'flowering plants' },
     { image: 'image/air_pur.png', alt: 'air plants' },
     { image: 'image/flowering.png', alt: 'indoor plants' }
+  ],
+  trending: [
+    { name: 'Jade Terrarium', price: 350, image: 'image/Jade_Terrarium.png' },
+    { name: 'Ficus Benjamina', price: 350, image: 'image/Ficus_Benjamina.png' },
+    { name: 'Syngorium Plant', price: 350, image: 'image/Syngorium_Plant.png' },
+    { name: 'Cactus Peruvianus', price: 350, image: 'image/Cactus_Peruvianus.png' },
+    { name: 'Chlorophytum Lemon', price: 350, image: 'image/Chlorophytum_Lemon.png' },
+    { name: 'Aloe Rauhii', price: 350, image: 'image/Aloe_Rauhii.png' },
+    { name: 'Areca Palm', price: 350, image: 'image/Areca_Palm.png' },
+    { name: 'Sansevieria Black', price: 350, image: 'image/Sansevieria_Black.png' }
   ]
-  };
+};
 
 /**
 @param {Array} data
@@ -46,6 +56,19 @@ function buildSection(data, containerId, templateType) {
           <a href="#" class="btn">Shop Now</a>
         `;
         break;
+      
+      case 'sale-mini': // Секція Trending Plants
+        element = document.createElement('div');
+        element.className = 'sale-box sale-box-mini';
+        element.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" class="sale-box-picture">
+          <div class="sale-box-info">
+              <p class="name">${item.name}</p>
+              <p class="price">$ ${item.price}</p>
+          </div>
+          <a href="#" class="btn">Buy</a>
+        `;
+        break;
     }
 
     if (element) container.appendChild(element);
@@ -54,3 +77,4 @@ function buildSection(data, containerId, templateType) {
 
 buildSection(database.positions, 'positionsMain', 'position-figure');
 buildSection(database.bestSelling, 'bestPlantsContainer', 'sale-large');
+buildSection(database.trending, 'trendingPlantsContainer', 'sale-mini');
