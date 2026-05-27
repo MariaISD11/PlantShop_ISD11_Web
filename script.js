@@ -37,6 +37,15 @@ const database = {
     { name: 'Ice Cream Pot', newPrice: 350, oldPrice: 450, image: 'image/Ice_Cream_Pot.png' },
     { name: 'Beige Fracture', newPrice: 350, oldPrice: 450, image: 'image/Beige_Fracture.png' },
     { name: 'Mint Fusion', newPrice: 350, oldPrice: 450, image: 'image/Mint_Fusion.png' }
+  ],
+  celebs: [
+    { name: 'Celeb 1', image: 'image/celeb1.png', columnClass: 's4-column' },
+    { name: 'Celeb 1', image: 'image/celeb2.png', columnClass: 's4-column' },
+    { name: 'Celeb 1', image: 'image/celeb3.png', columnClass: 's4-column' },
+    { name: 'Celeb 1', image: 'image/celeb4.png', columnClass: 's4-column' },
+    { name: 'Celeb 1', image: 'image/celeb5.png', columnClass: 's3-column' },
+    { name: 'Celeb 1', image: 'image/celeb6.png', columnClass: 's3-column' },
+    { name: 'Celeb 1', image: 'image/celeb7.png', columnClass: 's3-column' }
   ]
 };
 
@@ -114,6 +123,15 @@ function buildSection(data, containerId, templateType) {
           <a href="#" class="btn">Buy</a>
         `;
         break;
+
+      case 'celeb-figure': 
+        element = document.createElement('figure');
+        element.className = `celeb-card ${item.columnClass}`;
+        element.innerHTML = `
+          <img src="${item.image}" alt="celeb">
+          <figcaption>${item.name}</figcaption>
+        `;
+        break;
     }
 
     if (element) container.appendChild(element);
@@ -126,3 +144,4 @@ buildSection(database.trending, 'trendingPlantsContainer', 'sale-mini');
 buildSection(database.blogs, 'blogsContainer', 'blog-card');
 buildSection(database.hotSale, 'hotSalesContainer', 'sale-discount');
 buildSection(database.planters, 'plantersContainer', 'sale-discount');
+buildSection(database.celebs, 'celebsContainer', 'celeb-figure');
